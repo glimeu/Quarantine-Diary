@@ -11,7 +11,7 @@ $(document).ready(async () => {
     $('div#information').css('display', 'none');
   });
 
-  const url = 'http://192.168.0.108:3333/api';
+  const url = 'https://quarantine-diary.herokuapp.com/api';
 
   class Comments {
     constructor(baseURL) {
