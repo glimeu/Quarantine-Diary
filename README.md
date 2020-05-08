@@ -1,0 +1,1 @@
+# Quaretine Diary

@@ -1,0 +1,248 @@
+* {
+  outline: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: 300;
+  font-size: 16pt;
+  font-family: 'Roboto Mono', monospace;
+}
+
+body {
+  color: #fff;
+  background: #2e2e2e;
+}
+
+div.initial-warn {
+  display: none;
+  position: absolute;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  padding: 10%;
+  background: rgba(20, 20, 20, 0.95);
+}
+
+div.initial-warn > h2 {
+  margin: 20px 0;
+  text-align: center;
+  font-size: 18pt;
+}
+
+div.initial-warn > svg {
+  color: #c42525;
+  width: 50px;
+  height: 50px;
+}
+
+.button {
+  display: flex;
+  background: none;
+  border: solid #ff6a00;
+  padding: 5px;
+  font-size: 16pt;
+  border-radius: 3px;
+  color: #d3d3d3;
+  transition: all 0.2s;
+  align-items: center;
+  justify-content: center;
+}
+
+.button:hover {
+  background: #ff6a00;
+  color: #000;
+}
+
+div.main-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+div.main-container > header {
+  display: flex;
+  -webkit-user-select: none;
+  padding: 5px;
+  margin: 15px 0;
+  align-items: center;
+}
+
+div.main-container > header > h1 {
+  font-size: 32px;
+}
+
+div.main-container > header > .fas {
+  font-size: 32px;
+  margin-right: 3px;
+  color: #ff6a00;
+}
+
+div.main-container > ul.comments {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+}
+
+div.main-container > ul.comments > li.comment {
+  overflow: hidden;
+  list-style: none;
+  margin: 10px 0;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.3);
+  padding: 15px;
+  border-radius: 5px;
+  width: max-content;
+  max-width: 100%;
+  position: relative;
+  z-index: -1;
+}
+
+div.main-container > ul.comments > li.comment h2 {
+  font-size: 15pt;
+}
+
+div.main-container > ul.comments > li.comment p {
+  font-size: 13pt;
+  color: #d3d3d3;
+  margin: 10px 0;
+}
+
+div.main-container > ul.comments > li.comment span {
+  font-size: 10pt;
+  position: absolute;
+  right: 10px;
+  bottom: 5px;
+  color: #86e7ff;
+  -webkit-user-select: none;
+}
+
+div.main-container > div.write-area {
+  display: flex;
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  padding: 15px;
+  background: #fff;
+  color: #000;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  height: max-content;
+  font-size: 15pt;
+  box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.3);
+  -webkit-user-select: none;
+}
+
+div.main-container > div.write-area > form {
+  display: none;
+  position: initial;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+div.main-container > div.write-area > form i#x {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  right: 5px;
+  top: 5px;
+  height: 35px;
+  width: 35px;
+  padding: 5px;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 100%;
+}
+
+div.main-container > div.write-area .open-btn {
+  display: initial;
+}
+
+div.main-container > div.write-area.open > form {
+  display: flex;
+}
+
+div.main-container > div.write-area.open > .open-btn {
+  display: none;
+}
+
+div.main-container > div.write-area > form span {
+  font-size: 15pt;
+}
+
+div.main-container > div.write-area > form span i {
+  margin-right: 5px;
+  font-size: 15pt;
+}
+
+div.main-container > div.write-area > form input {
+  width: 350px;
+  height: auto;
+  margin-bottom: 20px;
+  margin-top: 3px;
+  box-shadow: 0px 1px 15px 0px rgba(0, 0, 0, 0.15);
+  border: solid 2px #d3d3d3;
+  padding: 5px;
+  font-size: 13pt;
+  transition: 0.2s;
+  border-radius: 5px;
+}
+
+div.main-container > div.write-area > form textarea {
+  width: 350px;
+  max-width: 350px;
+  min-width: 350px;
+  height: 250px;
+  max-height: 250px;
+  min-height: 250px;
+  margin-bottom: 20px;
+  margin-top: 3px;
+  box-shadow: 0px 1px 15px 0px rgba(0, 0, 0, 0.15);
+  border: solid 2px #d3d3d3;
+  padding: 5px;
+  font-size: 13pt;
+  transition: 0.2s;
+  border-radius: 5px;
+}
+
+div.main-container > div.write-area > form input:focus, div.main-container > div.write-area > form textarea:focus {
+  border-color: #ff6a00;
+}
+
+div.main-container > div.write-area > form button {
+  margin: 0 auto;
+  box-shadow: 0px 1px 15px 0px rgba(0, 0, 0, 0.25);
+  border: solid 2px #ff6a00;
+  border-radius: 3px;
+  background: none;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15pt;
+  transition: 0.2s;
+}
+
+div.main-container > div.write-area > form button:hover {
+  background: #ff6a00;
+  color: #fff;
+}
+
+div.main-container > div.write-area > form button:disabled {
+  cursor: not-allowed;
+  color: #6d6d6d;
+  background: none;
+}
+
+div.main-container > div.write-area > form button svg {
+  height: 15pt;
+  width: 15pt;
+  margin-right: 2px;
+}
