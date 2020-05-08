@@ -31,7 +31,7 @@ app.use(Routes);
 const port = process.env.PORT || 3000;
 
 // Configuração do servidor estático
-const baseDir = `${__dirname}/./public/`;
+const baseDir = `${__dirname}/../public/`;
 
 app.use(express.static(`${baseDir}`));
 app.get('/', (req, res) => res.sendFile('index.html', { root: baseDir }));
