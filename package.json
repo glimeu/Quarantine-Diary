@@ -9,6 +9,10 @@
     "build": "npm lint && sucrase ./src -d ./dist --transforms imports",
     "lint": "node_modules/.bin/eslint src/ --fix"
   },
+  "engines": {
+    "node": "12.16.3",
+    "yarn": "1.17.3"
+  },
   "dependencies": {
     "axios": "^0.19.2",
     "cors": "^2.8.5",
